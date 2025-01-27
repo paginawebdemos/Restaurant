@@ -24,18 +24,20 @@
         </div>
     </header>
 
+    <!-- Menú desplegable -->
+    <nav class="dropdown-menu">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+        <div class="menu-links" id="menu-links" style="display: none;">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#reservation"><i class="fas fa-calendar-alt"></i> Reservar</a>
+        </div>
+    </nav>
+
     <!-- Contenedor principal -->
     <main>
         <section class="menu-container">
-            <!-- Iconos de redes sociales y botón para reservar -->
-            <div class="social-reservation">
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-                <button class="reservation-button">Reservar Mesa</button>
-            </div>
             <!-- Cajas de búsqueda y categorías -->
             <div class="filter-container">
                 <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
@@ -81,6 +83,17 @@
         </div>
     </div>
 
+    <script>
+        function toggleMenu() {
+            const menuLinks = document.getElementById('menu-links');
+            if (menuLinks.style.display === 'none' || menuLinks.style.display === '') {
+                menuLinks.style.display = 'block';
+            } else {
+                menuLinks.style.display = 'none';
+            }
+        }
+    </script>
+
     <script src="menu.js" type="module"></script>
     <script src="script.js"></script>
 
@@ -93,3 +106,4 @@
 </body>
 
 </html>
+
