@@ -266,6 +266,9 @@ body {
         font-size: 1.8rem; /* Reducir tama�o en dispositivos m�viles */
     }
   }
+
+
+
  
 /* Encabezado rediseñado */
 .header {
@@ -312,6 +315,61 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
+        /* Estilos para redes sociales y botón de reserva */
+        .social-reservation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #007bff;
+        }
+
+        .reservation-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .reservation-button:hover {
+            background: #0056b3;
+        }
+
+        /* Ajustes en el contenedor del menú */
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-box, .category-filter {
+            max-width: 300px;
+            width: 100%;
+        }
 
 .filter-container {
   display: flex;
