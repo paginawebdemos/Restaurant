@@ -274,38 +274,46 @@ body {
     background-color: #e67e22;
     border: none;
     color: white;
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    padding: 12px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
 }
 
 .menu-toggle:hover {
     background-color: #d35400;
+    transform: scale(1.05); /* Le da un pequeño efecto de escala */
 }
 
 .menu-links {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 60px; /* Ajustado para no estar tan pegado al botón */
     left: 50%;
     transform: translateX(-50%);
     background-color: #ecf0f1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     padding: 10px 0;
-    width: 200px;
+    width: 180px; /* Tamaño optimizado para no ser tan grande */
     text-align: center;
+    z-index: 10;
 }
 
 .menu-links a {
     display: block;
     color: #34495e;
-    padding: 10px 15px;
+    padding: 12px 15px;
     text-decoration: none;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #ccc; /* Agrega separación entre los enlaces */
+}
+
+.menu-links a:last-child {
+    border-bottom: none; /* El último enlace no tendrá borde */
 }
 
 .menu-links a:hover {
@@ -314,8 +322,16 @@ body {
 }
 
 .menu-links i {
-    margin-right: 10px;
+    margin-right: 8px;
 }
+
+/* Estilo para mejorar la visibilidad y la accesibilidad del menú */
+.menu-links a:focus {
+    outline: 2px solid #6c5ce7;
+    background-color: #f39c12;
+    color: white;
+}
+
 
 /* Estilo para el contenedor del menú */
 .menu-container {
