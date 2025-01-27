@@ -264,72 +264,71 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para el menú desplegable */
+/* Menú desplegable - ubicación y estilo */
 .dropdown-menu {
-    position: relative;
-    text-align: center;
+    position: fixed;
+    top: 20px; /* Ubicación en la esquina superior */
+    right: 20px; /* Alineado a la derecha */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que el menú se superponga a otros elementos */
 }
 
 .menu-toggle {
-    background-color: #e67e22;
-    border: none;
+    background-color: #6c5ce7;
     color: white;
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .menu-toggle:hover {
-    background-color: #d35400;
-    transform: scale(1.05); /* Le da un pequeño efecto de escala */
+    background-color: #5a4ed6;
 }
 
 .menu-links {
-    display: none;
+    display: none; /* Inicialmente oculto */
+    background-color: #ffffff;
     position: absolute;
-    top: 60px; /* Ajustado para no estar tan pegado al botón */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ecf0f1;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px 0;
-    width: 180px; /* Tamaño optimizado para no ser tan grande */
-    text-align: center;
-    z-index: 10;
+    top: 100%; /* Se abre justo debajo del botón */
+    right: 0;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .menu-links a {
     display: block;
-    color: #34495e;
-    padding: 12px 15px;
+    padding: 12px 20px;
+    color: #333;
     text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-bottom: 1px solid #ccc; /* Agrega separación entre los enlaces */
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
 }
 
 .menu-links a:last-child {
-    border-bottom: none; /* El último enlace no tendrá borde */
+    border-bottom: none; /* Quitar la línea en el último enlace */
 }
 
 .menu-links a:hover {
-    background-color: #f39c12;
-    color: white;
+    background-color: #f0f0f0;
 }
 
-.menu-links i {
-    margin-right: 8px;
+.menu-links a i {
+    margin-right: 10px;
 }
 
-/* Estilo para mejorar la visibilidad y la accesibilidad del menú */
-.menu-links a:focus {
-    outline: 2px solid #6c5ce7;
-    background-color: #f39c12;
-    color: white;
+/* Estilo cuando el menú está abierto */
+.menu-links.show {
+    display: block;
 }
 
 
