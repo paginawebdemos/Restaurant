@@ -268,6 +268,7 @@ body {
 .dropdown-menu {
     position: relative;
     text-align: center;
+    z-index: 1000;
 }
 
 .menu-toggle {
@@ -275,11 +276,11 @@ body {
     border: none;
     color: white;
     font-size: 1.5rem;
-    padding: 12px 24px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle:hover {
@@ -289,21 +290,24 @@ body {
 .menu-links {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ecf0f1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px 0;
-    width: 200px;
-    text-align: center;
-    animation: slideDown 0.3s ease-in-out;
+    width: 220px; /* Aumentamos el ancho para más espacio */
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.menu-links.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu-links a {
@@ -313,6 +317,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ddd;
 }
 
 .menu-links a:hover {
@@ -324,13 +329,20 @@ body {
     margin-right: 10px;
 }
 
-/* Estilo para el contenedor del menú */
-.menu-container {
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Ajustes de hover para los elementos del menú */
+.menu-links a:last-child {
+    border-bottom: none;
 }
+
+/* Estilo adicional para el botón del menú */
+.menu-toggle {
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
 
 
 
