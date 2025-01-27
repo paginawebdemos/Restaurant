@@ -267,7 +267,7 @@ body {
 /* Menú desplegable - ubicación y estilo */
 .dropdown-menu {
     position: fixed;
-    top: 20px; /* Ubicación en la esquina superior */
+    top: 80px; /* Ajustado para que no cubra el encabezado */
     right: 20px; /* Alineado a la derecha */
     background-color: #ffffff;
     border-radius: 10px;
