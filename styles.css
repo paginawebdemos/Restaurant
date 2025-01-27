@@ -222,51 +222,66 @@ body {
     }
   }
   
-  /* Estilos generales para las redes sociales */
-  .social-media {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .social-icon {
-    display: inline-block;
-    margin: 0 1rem;
-    font-size: 2rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Efecto hover para cambiar color */
-  .social-icon:hover {
-    color: #4a90e2; /* Color de cambio al pasar el rat�n */
-    transform: scale(1.1); /* Aumenta el tama�o del icono ligeramente */
-  }
-  
-  /* Colores espec�ficos para cada red social */
-  .instagram {
-    color: #E1306C;
-  }
-  
-  .instagram:hover {
-    color: #C13584; /* Cambio de color en hover */
-  }
-  
-  .facebook {
-    color: #3b5998;
-  }
-  
-  .facebook:hover {
-    color: #1d3557; /* Cambio de color en hover */
-  }
-  
-  /* Asegura que en dispositivos m�viles los �conos se vean bien centrados */
-  @media (max-width: 768px) {
-    .social-icon {
-        font-size: 1.8rem; /* Reducir tama�o en dispositivos m�viles */
-    }
-  }
+        /* Estilos para redes sociales y botón de reserva */
+        .social-reservation {
+            background: linear-gradient(135deg, #ffcc70, #ff7c7c);
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
 
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ffe9c4;
+            transform: scale(1.1);
+        }
+
+        .reservation-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: #007bff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .reservation-button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Ajustes en el contenedor del menú */
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-box, .category-filter {
+            max-width: 300px;
+            width: 100%;
+        }
 
 
  
