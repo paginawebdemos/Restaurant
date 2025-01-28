@@ -297,6 +297,9 @@ body {
   background: linear-gradient(135deg, #0008ea, #00d9ff);
   border-bottom: 4px solid #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;  /* Fijar el encabezado al hacer scroll */
+  top: 0;  /* Asegura que quede en la parte superior */
+  z-index: 1000;  /* Mantener el encabezado por encima del resto del contenido */
 }
 
 .header-content {
@@ -334,10 +337,16 @@ body {
   gap: 15px;  /* Reducir el espacio entre el menú y las cajas */
 }
 
+/* Fijar las cajas de búsqueda */
 .filter-container {
   display: flex;
   justify-content: center;
   gap: 20px;
+  position: sticky;  /* Fijar las cajas de búsqueda al hacer scroll */
+  top: 80px;  /* Colocarlas debajo del encabezado (ajustar según el tamaño del encabezado) */
+  background-color: white;  /* Fondo blanco para las cajas */
+  padding: 10px 0;  /* Espacio adicional si es necesario */
+  z-index: 999;  /* Mantener las cajas debajo del encabezado */
 }
 
 .search-box, .category-filter {
@@ -389,7 +398,6 @@ body {
     padding: 10px;
   }
 }
-
 
 
 
