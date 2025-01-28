@@ -237,9 +237,9 @@ body {
 .menu-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 15px; /* Espacio reducido entre los elementos */
   font-size: 1.2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Asegura que todos los elementos se mantengan en una fila */
   align-items: center;
 }
 
@@ -260,9 +260,9 @@ body {
 /* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .menu-links {
-    gap: 15px; /* Menos espacio entre los elementos */
+    gap: 10px; /* Espacio aún más pequeño entre los elementos */
     font-size: 1rem; /* Tamaño más pequeño */
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Asegura que los elementos tengan espacio uniforme */
   }
 
   .menu-links a {
