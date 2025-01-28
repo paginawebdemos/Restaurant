@@ -237,16 +237,19 @@ body {
 .menu-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   font-size: 1.2rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .menu-links a {
   text-decoration: none;
   color: #333;
-  padding: 10px 20px;
+  padding: 8px 15px;  /* Reducción del padding */
   border-radius: 30px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .menu-links a:hover {
@@ -257,15 +260,14 @@ body {
 /* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .menu-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    gap: 15px; /* Menos espacio entre los elementos */
+    font-size: 1rem; /* Tamaño más pequeño */
+    justify-content: space-evenly;
   }
 
   .menu-links a {
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
+    padding: 6px 12px; /* Menos padding en pantallas pequeñas */
+    font-size: 0.9rem; /* Reducción de tamaño de fuente */
   }
 }
 
@@ -370,6 +372,7 @@ body {
     padding: 10px;
   }
 }
+
 
 
     
