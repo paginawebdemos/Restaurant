@@ -223,7 +223,6 @@ body {
   }
   
         
-
 /* Estilo para el menú */
 .menu {
   background-color: #ffffff;
@@ -296,18 +295,7 @@ body {
   background: linear-gradient(135deg, #0008ea, #00d9ff);
   border-bottom: 4px solid #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: fixed; /* Fija el encabezado */
-  top: 0; /* Ubicación en la parte superior de la ventana */
-  left: 0;
-  width: 100%; /* Asegura que el encabezado cubra todo el ancho */
-  z-index: 1000; /* Coloca el encabezado por encima de otros elementos */
 }
-
-/* Ajustar el contenedor principal para evitar superposición */
-main {
-  margin-top: 120px; /* Añade un margen para compensar la altura del encabezado */
-}
-
 
 .header-content {
   display: flex;
@@ -337,14 +325,12 @@ main {
 }
 
 /* Estilo para el contenedor del menú */
-/* Estilo para el contenedor del menú */
 .menu-container {
-  padding: 10px 20px;  /* Reducir aún más el padding superior */
+  padding: 10px 20px;  /* Reducir el padding superior */
   display: flex;
   flex-direction: column;
-  gap: 10px;  /* Reducir más el espacio entre el menú y las cajas */
+  gap: 10px;  /* Reducir el espacio entre el menú y las cajas */
 }
-
 
 .filter-container {
   display: flex;
@@ -401,6 +387,7 @@ main {
     padding: 10px;
   }
 }
+
 
 
 
