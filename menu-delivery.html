@@ -24,15 +24,16 @@
         </div>
     </header>
 
-  <!-- Menú desplegable -->
-<nav class="menu">
-    <div class="menu-links">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="#reservation"><i class="fas fa-calendar-alt"></i> Reservar</a>
+<nav class="dropdown-menu">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <div class="menu-links" id="menu-links" style="display: none;">
+        <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#reservation" class="reservar"><i class="fas fa-calendar-alt"></i> Reservar</a>
     </div>
 </nav>
+
 
 
     <!-- Contenedor principal -->
