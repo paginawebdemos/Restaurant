@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Usaremos jQuery para facilitar la manipulación -->
+</head>
+<body>
+    <header>
+        <h1>Formulario de Reserva</h1>
+    </header>
+
+    <section class="reserva-form">
+        <form id="formReserva">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="fecha">Fecha de Reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora de Reserva:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="personas">Número de Personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+
+            <button type="button" id="confirmarReserva">Confirmar Reserva</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
