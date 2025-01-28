@@ -226,53 +226,47 @@ body {
 
 
  
-/* Encabezado rediseñado */
+/* Menú desplegable integrado en el encabezado */
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #0008ea, #00d9ff);
-  border-bottom: 4px solid #000000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0008ea, #00d9ff);
+    border-bottom: 4px solid #000000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-text h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  font-weight: 700;
-  margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
 }
 
 .header-text p {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Menú desplegable - ubicación y estilo */
+/* Estilo para el contenedor del menú dentro del encabezado */
 .dropdown-menu {
-    position: fixed;
-    top: 80px; /* Ajustado para que no cubra el encabezado */
-    right: 20px; /* Alineado a la derecha */
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Asegura que el menú se superponga a otros elementos */
+    position: relative;
 }
 
 .menu-toggle {
@@ -292,11 +286,12 @@ body {
     background-color: #5a4ed6;
 }
 
+/* Menú desplegable, sin tapar el contenido */
 .menu-links {
-    display: none; /* Inicialmente oculto */
+    display: none;
     background-color: #ffffff;
     position: absolute;
-    top: 100%; /* Se abre justo debajo del botón */
+    top: 50px; /* Ajusta la altura del menú para que no tape el encabezado */
     right: 0;
     width: 200px;
     border-radius: 5px;
@@ -315,7 +310,7 @@ body {
 }
 
 .menu-links a:last-child {
-    border-bottom: none; /* Quitar la línea en el último enlace */
+    border-bottom: none;
 }
 
 .menu-links a:hover {
@@ -330,7 +325,6 @@ body {
 .menu-links.show {
     display: block;
 }
-
 
 /* Estilo para el contenedor del menú */
 .menu-container {
