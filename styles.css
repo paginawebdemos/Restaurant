@@ -223,7 +223,31 @@ body {
   }
   
         
-/* Estilo para el menú */
+/* Encabezado fijo */
+.header {
+  position: fixed; /* Hace que el encabezado permanezca fijo en la parte superior */
+  top: 0; /* Asegura que esté alineado al borde superior */
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 1000; /* Garantiza que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0008ea, #00d9ff);
+  border-bottom: 4px solid #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Espaciado adicional para compensar el encabezado fijo */
+.menu-container {
+  padding: 100px 20px 20px; /* Se agrega espacio en la parte superior */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reducir el espacio entre el menú y las cajas */
+}
+
+/* Resto del código original */
 .menu {
   background-color: #ffffff;
   border-bottom: 2px solid #ccc;
@@ -286,72 +310,6 @@ body {
   }
 }
 
-/* Encabezado rediseñado */
-.header {
-  position: fixed; /* Fija el encabezado */
-  top: 0; /* Asegura que esté en la parte superior */
-  left: 0; /* Alineación a la izquierda */
-  width: 100%; /* Abarca todo el ancho */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #0008ea, #00d9ff);
-  border-bottom: 4px solid #000000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Ajustar el contenedor principal para compensar el encabezado fijo */
-.menu-container {
-  padding-top: 120px; /* Añadir espacio para evitar que el contenido quede oculto detrás del encabezado */
-}
-
-/* Menú */
-.menu {
-  margin-top: 20px; /* Espaciado adicional entre el encabezado y el menú */
-  background-color: #ffffff;
-  border-bottom: 2px solid #ccc;
-  padding: 10px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.header-text h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  font-weight: 700;
-  margin: 0;
-}
-
-.header-text p {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo para el contenedor del menú */
-.menu-container {
-  padding: 10px 20px;  /* Reducir el padding superior */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;  /* Reducir el espacio entre el menú y las cajas */
-}
-
 .filter-container {
   display: flex;
   justify-content: center;
@@ -376,7 +334,6 @@ body {
   box-shadow: 0 0 10px rgba(108, 92, 237, 0.5);
 }
 
-/* Estilo para los ítems del menú */
 .menu-items {
   display: flex;
   flex-wrap: wrap;
@@ -395,7 +352,6 @@ body {
   max-width: 300px;
 }
 
-/* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .filter-container {
     flex-direction: column;
@@ -407,7 +363,6 @@ body {
     padding: 10px;
   }
 }
-
 
 
 
