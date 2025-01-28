@@ -328,7 +328,7 @@ body {
 
 /* Estilo para el contenedor del menú */
 .menu-container {
-  padding: 20px 20px;  /* Reducir el padding superior */
+  padding: 10px 20px;  /* Reducir el padding superior */
   display: flex;
   flex-direction: column;
   gap: 15px;  /* Reducir el espacio entre el menú y las cajas */
