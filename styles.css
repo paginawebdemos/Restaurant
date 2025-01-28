@@ -245,7 +245,8 @@ body {
 
 .menu-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff; /* Color blanco para el texto */
+  background-color: #6c5ce7; /* Fondo morado */
   padding: 8px 15px;  /* Reducción del padding */
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -253,8 +254,8 @@ body {
 }
 
 .menu-links a:hover {
-  background-color: #6c5ce7;
-  color: #ffffff;
+  background-color: #ff6f61; /* Cambio de fondo a color naranja al pasar el mouse */
+  color: #ffffff; /* Color blanco al pasar el mouse */
 }
 
 /* Media Query para pantallas pequeñas */
@@ -372,7 +373,6 @@ body {
     padding: 10px;
   }
 }
-
 
 
     
