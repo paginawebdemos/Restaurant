@@ -296,9 +296,6 @@ body {
   background: linear-gradient(135deg, #0008ea, #00d9ff);
   border-bottom: 4px solid #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: sticky;  /* Fijar el encabezado al hacer scroll */
-  top: 0;  /* Asegura que quede en la parte superior */
-  z-index: 1000;  /* Mantener el encabezado por encima del resto del contenido */
 }
 
 .header-content {
@@ -329,23 +326,19 @@ body {
 }
 
 /* Estilo para el contenedor del menú */
+/* Estilo para el contenedor del menú */
 .menu-container {
-  padding: 10px 20px;  /* Reducir el padding superior */
+  padding: 10px 20px;  /* Reducir aún más el padding superior */
   display: flex;
   flex-direction: column;
-  gap: 15px;  /* Reducir el espacio entre el menú y las cajas */
+  gap: 10px;  /* Reducir más el espacio entre el menú y las cajas */
 }
 
-/* Fijar las cajas de búsqueda */
+
 .filter-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  position: sticky;  /* Fijar las cajas de búsqueda al hacer scroll */
-  top: 70px;  /* Ajustar el top a un valor más pequeño para evitar que se pasen */
-  background-color: white;  /* Fondo blanco para las cajas */
-  padding: 10px 0;  /* Espacio adicional si es necesario */
-  z-index: 999;  /* Mantener las cajas debajo del encabezado */
 }
 
 .search-box, .category-filter {
@@ -354,7 +347,6 @@ body {
   border-radius: 25px;
   border: 2px solid #ccc;
   transition: all 0.3s ease;
-  flex-shrink: 0;  /* Evita que las cajas se encojan y desaparezcan */
 }
 
 .search-box:hover, .category-filter:hover {
