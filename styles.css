@@ -226,105 +226,72 @@ body {
 
 
  
-/* Menú desplegable integrado en el encabezado */
-.header {
-    display: flex;
-    justify-content: space-between; /* Alinea los elementos a los extremos */
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #0008ea, #00d9ff);
-    border-bottom: 4px solid #000000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Estilo para el menú */
+.menu {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.header-text h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: 700;
-    margin: 0;
-}
-
-.header-text p {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin: 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo para el contenedor del menú dentro del encabezado */
-.dropdown-menu {
-    position: relative;
-}
-
-.menu-toggle {
-    background-color: #6c5ce7;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.menu-toggle:hover {
-    background-color: #5a4ed6;
-}
-
-/* Menú desplegable, sin tapar el contenido */
 .menu-links {
-    display: none;
-    background-color: #ffffff;
-    position: absolute;
-    top: 50px; /* Ajusta la altura del menú para que no tape el encabezado */
-    right: 0;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.2rem;
 }
 
 .menu-links a {
-    display: block;
-    padding: 12px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
-}
-
-.menu-links a:last-child {
-    border-bottom: none;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .menu-links a:hover {
-    background-color: #f0f0f0;
+  background-color: #6c5ce7;
+  color: #ffffff;
 }
 
-.menu-links a i {
-    margin-right: 10px;
+/* Encabezado rediseñado */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0008ea, #00d9ff);
+  border-bottom: 4px solid #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo cuando el menú está abierto */
-.menu-links.show {
-    display: block;
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-text p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 
 /* Estilo para el contenedor del menú */
 .menu-container {
@@ -333,8 +300,6 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
-
 
 .filter-container {
   display: flex;
