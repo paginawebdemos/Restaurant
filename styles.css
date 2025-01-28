@@ -223,28 +223,7 @@ body {
   }
   
         
-/* Estilo para el encabezado fijo */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #0008ea, #00d9ff);
-  border-bottom: 4px solid #000000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: fixed; /* Hace que el encabezado sea fijo */
-  top: 0; /* Alinea el encabezado en la parte superior */
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Asegura que el encabezado esté encima de otros elementos */
-}
-
-/* Añadir margen superior para evitar que el contenido se solape con el encabezado */
-.menu-container {
-  padding-top: 120px; /* Ajusta según la altura del encabezado */
-}
-
-/* Otros estilos permanecen sin cambios */
+/* Estilo para el menú */
 .menu {
   background-color: #ffffff;
   border-bottom: 2px solid #ccc;
@@ -307,6 +286,21 @@ body {
   }
 }
 
+/* Encabezado rediseñado */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0008ea, #00d9ff);
+  border-bottom: 4px solid #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky; /* Hace que el encabezado quede fijo al desplazarse */
+  top: 0; /* Fija el encabezado al borde superior */
+  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+
 .header-content {
   display: flex;
   align-items: center;
@@ -334,6 +328,39 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilo para el contenedor del menú */
+.menu-container {
+  padding: 20px 20px;  /* Reducir el padding superior */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* Reducir el espacio entre el menú y las cajas */
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-box, .category-filter {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.search-box:hover, .category-filter:hover {
+  border-color: #6c5ce7;
+}
+
+.search-box:focus, .category-filter:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 237, 0.5);
+}
+
+/* Estilo para los ítems del menú */
 .menu-items {
   display: flex;
   flex-wrap: wrap;
@@ -352,6 +379,7 @@ body {
   max-width: 300px;
 }
 
+/* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .filter-container {
     flex-direction: column;
