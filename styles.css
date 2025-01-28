@@ -224,7 +224,6 @@ body {
   
         
 
-
 /* Estilo para el menú */
 .menu {
   background-color: #ffffff;
@@ -343,7 +342,7 @@ body {
   justify-content: center;
   gap: 20px;
   position: sticky;  /* Fijar las cajas de búsqueda al hacer scroll */
-  top: 80px;  /* Colocarlas debajo del encabezado (ajustar según el tamaño del encabezado) */
+  top: 70px;  /* Ajustar el top a un valor más pequeño para evitar que se pasen */
   background-color: white;  /* Fondo blanco para las cajas */
   padding: 10px 0;  /* Espacio adicional si es necesario */
   z-index: 999;  /* Mantener las cajas debajo del encabezado */
