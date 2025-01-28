@@ -289,7 +289,7 @@ body {
 /* Encabezado rediseñado */
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Asegura espacio entre redes sociales y título */
   align-items: center;
   padding: 20px;
   background: linear-gradient(135deg, #0008ea, #00d9ff);
@@ -305,6 +305,22 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.header-social {
+  display: flex;
+  gap: 10px;
+}
+
+.header-social a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.header-social a:hover {
+  color: #6c5ce7;
 }
 
 .logo {
