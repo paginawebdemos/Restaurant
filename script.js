@@ -20,7 +20,7 @@ $(document).ready(function() {
         `);
 
         // Número de teléfono de WhatsApp (Ejemplo: +1234567890)
-        var telefono = "1234567890"; // Reemplaza con tu número
+        var telefono = "+584246516245"; // Reemplaza con tu número
 
         // Crear el enlace de WhatsApp
         var urlWhatsApp = `https://wa.me/${telefono}?text=${mensaje}`;
