@@ -289,11 +289,6 @@ body {
 
 /* Encabezado rediseñado */
 .header {
-  position: fixed; /* Hace que el encabezado quede fijo al desplazarse */
-  top: 0; /* Posiciona el encabezado en la parte superior */
-  left: 0;
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  z-index: 1000; /* Lo coloca por encima de otros elementos */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,14 +296,19 @@ body {
   background: linear-gradient(135deg, #0008ea, #00d9ff);
   border-bottom: 4px solid #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fija el encabezado */
+  top: 0; /* Ubicación en la parte superior de la ventana */
+  left: 0;
+  width: 100%; /* Asegura que el encabezado cubra todo el ancho */
+  z-index: 1000; /* Coloca el encabezado por encima de otros elementos */
 }
 
-/* Agregar margen superior para evitar solapamiento con contenido */
-.menu-container {
-  margin-top: 100px; /* Ajustar según la altura del encabezado */
+/* Ajustar el contenedor principal para evitar superposición */
+main {
+  margin-top: 120px; /* Añade un margen para compensar la altura del encabezado */
 }
 
-/* Estilo para el contenido del encabezado */
+
 .header-content {
   display: flex;
   align-items: center;
@@ -327,13 +327,6 @@ body {
   color: #ffffff;
   font-weight: 700;
   margin: 0;
-}
-
-.header-text p {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-text p {
