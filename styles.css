@@ -225,8 +225,7 @@ body {
         
 
 
- 
-/* Estilo para el menú */
+ /* Estilo para el menú */
 .menu {
   background-color: #ffffff;
   border-bottom: 2px solid #ccc;
@@ -245,7 +244,7 @@ body {
 
 .menu-links a {
   text-decoration: none;
-  color: #ffffff; /* Color blanco para el texto */
+  color: #ffffff; /* Color blanco por defecto */
   background-color: #6c5ce7; /* Fondo morado */
   padding: 8px 15px;  /* Reducción del padding */
   border-radius: 30px;
@@ -256,6 +255,24 @@ body {
 .menu-links a:hover {
   background-color: #ff6f61; /* Cambio de fondo a color naranja al pasar el mouse */
   color: #ffffff; /* Color blanco al pasar el mouse */
+}
+
+/* Estilo específico para las redes sociales y "Reservar" en negro */
+.menu-links a.facebook,
+.menu-links a.instagram,
+.menu-links a.twitter,
+.menu-links a.reservar {
+  color: #000000; /* Texto negro */
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid #000000; /* Borde negro */
+}
+
+.menu-links a.facebook:hover,
+.menu-links a.instagram:hover,
+.menu-links a.twitter:hover,
+.menu-links a.reservar:hover {
+  background-color: #000000; /* Fondo negro al pasar el cursor */
+  color: #ffffff; /* Texto blanco al pasar el cursor */
 }
 
 /* Media Query para pantallas pequeñas */
@@ -373,6 +390,7 @@ body {
     padding: 10px;
   }
 }
+
 
 
     
