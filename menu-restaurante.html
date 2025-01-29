@@ -21,10 +21,13 @@
         <p>Cargando el menú...</p>
     </div>
 
-    <div class="menu-section">
-        <h2>🍽️ Luna Mágica 🌙</h2>
-        <div class="filter-container">
-            <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
+<section class="menu-container">
+    <div class="filter-container">
+        <div class="search-wrapper">
+            <input type="text" id="search" placeholder="Buscar plato..." class="search-box">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="select-wrapper">
             <select id="category-filter-select" class="category-filter">
                 <option value="">🌐 Todas las categorías</option>
                 <option value="Entradas">🥗 Entradas</option>
@@ -34,8 +37,11 @@
             </select>
         </div>
     </div>
+    <section id="menu" class="menu-items">
+        <!-- Aquí se cargarán los ítems del menú -->
+    </section>
+</section>
 
-    <section id="menu" class="container"></section>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
