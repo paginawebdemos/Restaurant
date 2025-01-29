@@ -449,55 +449,101 @@ body {
       z-index: -1;
     }
     
-    /* Contenedor del filtro */
-    .filter-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    
-    /* Estilo para el input de b�squeda */
-    .search-box {
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 25px;
-      border: 2px solid #ccc;
-      width: 250px;
-      transition: all 0.3s ease;
-    }
-    
-    .search-box:focus {
-      outline: none;
-      border-color: #6c5ce7;
-    }
-    
-    /* Estilo para el select del filtro */
-    .category-filter {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 25px;
-      border: 2px solid #ccc;
-      background-color: rgb(255, 255, 255);
-      width: 220px;
-      transition: all 0.3s ease;
-    }
-    
-    .category-filter:hover, .search-box:hover {
-      border-color: #6c5ce7;
-    }
-    
-    /* Animaci�n para las categor�as */
-    .category-filter, .search-box {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .category-filter:focus {
-      outline: none;
-      border-color: #6c5ce7;
-      box-shadow: 0 0 10px rgba(108, 92, 237, 0.5);
-    }
+/* Contenedor del filtro */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor del input de búsqueda con icono */
+.search-wrapper {
+  position: relative;
+}
+
+.search-box {
+  padding: 12px 40px 12px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  width: 280px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 237, 0.4);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c5ce7;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Estilo para el select con contenedor */
+.select-wrapper {
+  position: relative;
+}
+
+.category-filter {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  width: 250px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  appearance: none; /* Oculta la flecha por defecto */
+  cursor: pointer;
+}
+
+/* Añadir icono de dropdown */
+.select-wrapper::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #6c5ce7;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.category-filter:hover,
+.search-box:hover {
+  border-color: #6c5ce7;
+}
+
+.category-filter:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 237, 0.4);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .search-box,
+  .category-filter {
+    width: 90%;
+  }
+}
+
     /* Estilo para el contenedor principal de la secci�n del men� */
     .container {
       display: flex;
