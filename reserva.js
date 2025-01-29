@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       `✅ *Por favor, confirma esta reserva lo antes posible.*`;
 
         // Número de teléfono de WhatsApp (Reemplázalo con tu número)
-        var telefono = "1234567890"; 
+        var telefono = "+584246516245"; 
 
         // Crear el enlace de WhatsApp
         var urlWhatsApp = `https://wa.me/${telefono}?text=${mensaje}`;
