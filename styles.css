@@ -745,8 +745,8 @@ h2 {
 
 #search, #category-filter-select {
   width: 100%;
-  font-size: 14px;  /* Reducir el tamaño de la fuente */
-  padding: 8px 12px;  /* Reducir el relleno */
+  font-size: 16px;  /* Reducir el tamaño de la fuente */
+  padding: 10px 12px;  /* Reducir el relleno */
 }
 
 
