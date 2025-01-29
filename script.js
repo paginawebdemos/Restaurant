@@ -1,4 +1,4 @@
-// script.js
+
 
 $(document).ready(function() {
     $("#confirmarReserva").click(function() {
