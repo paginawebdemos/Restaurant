@@ -84,19 +84,21 @@
             const quantity = document.getElementById('quantity').value;
             const total = (parseFloat(selectedItem.price.replace('$', '')) * quantity).toFixed(2);
 
-            const message = `
-*Nuevo pedido de:*
-*Nombre:* ${name} ${surname}
-*Dirección:* ${address}
-*Número de contacto:* ${contact}
+const message = `
+📌 *Nuevo Pedido de Delivery* 📌
 
-*Detalles del plato:*
-*Plato:* ${selectedItem.name}
-*Cantidad:* ${quantity}
-*Precio por unidad:* ${selectedItem.price}
-*Total:* $${total}
+👤 *Cliente:* ${name} ${surname}
+🏠 *Dirección:* ${address}
+📞 *Contacto:* ${contact}
 
-Por favor, confirmar el pedido.`;
+🍽️ *Detalles del Pedido:*
+📌 *Plato:* ${selectedItem.name}
+🔢 *Cantidad:* ${quantity}
+💰 *Precio por unidad:* ${selectedItem.price}
+🧾 *Total:* $${total}
+
+✅ *Por favor, confirmar el pedido.*`;
+
 
              
             window.location.href = `https://wa.me/584246516245?text=${encodeURIComponent(message)}`;
