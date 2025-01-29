@@ -329,10 +329,10 @@ body {
 
 /* Estilo para el contenedor del menú */
 .menu-container {
-  padding: 10px 20px;
+  padding: 8px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .filter-container {
