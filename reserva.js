@@ -9,18 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
         var hora = document.getElementById("hora").value;
         var personas = document.getElementById("personas").value;
 
-        // Crear el mensaje para enviar a WhatsApp
-        var mensaje = encodeURIComponent(`
-            *Reserva Confirmada*
-            Nombre: ${nombre}
-            Correo: ${correo}
-            Fecha: ${fecha}
-            Hora: ${hora}
-            Personas: ${personas}
-        `);
+        // Verificar que todos los campos estén llenos
+        if (!nombre || !correo || !fecha || !hora || !personas) {
+            alert("Por favor, completa todos los campos antes de confirmar la reserva.");
+            return;
+        }
 
-        // Número de teléfono de WhatsApp (ejemplo: +1234567890)
-        var telefono = "+584246516245"; // Reemplázalo con tu número
+        // Crear el mensaje formateado para WhatsApp
+        var mensaje = `🔔 *Nueva Reserva* 🔔%0A%0A` +
+                      `👤 *Nombre:* ${nombre}%0A` +
+                      `📧 *Correo:* ${correo}%0A` +
+                      `📅 *Fecha:* ${fecha}%0A` +
+                      `⏰ *Hora:* ${hora}%0A` +
+                      `👥 *Número de Personas:* ${personas}%0A%0A` +
+                      `✅ *Por favor, confirma esta reserva lo antes posible.*`;
+
+        // Número de teléfono de WhatsApp (Reemplázalo con tu número)
+        var telefono = "1234567890"; 
 
         // Crear el enlace de WhatsApp
         var urlWhatsApp = `https://wa.me/${telefono}?text=${mensaje}`;
