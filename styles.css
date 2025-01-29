@@ -295,11 +295,10 @@ body {
   background: linear-gradient(135deg, #0008ea, #00d9ff);
   border-bottom: 4px solid #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: sticky; /* Hace que el encabezado quede fijo al desplazarse */
-  top: 0; /* Fija el encabezado al borde superior */
-  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 
 .header-content {
   display: flex;
@@ -330,10 +329,10 @@ body {
 
 /* Estilo para el contenedor del menú */
 .menu-container {
-  padding: 10px 20px;  /* Reducir el padding superior */
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;  /* Reducir el espacio entre el menú y las cajas */
+  gap: 10px;
 }
 
 .filter-container {
@@ -383,12 +382,38 @@ body {
 @media screen and (max-width: 768px) {
   .filter-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .search-box, .category-filter {
+    width: 90%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
   }
 
   .search-box, .category-filter {
     width: 100%;
-    padding: 10px;
+    padding: 7px 10px;
+    font-size: 0.85rem;
   }
 }
 
