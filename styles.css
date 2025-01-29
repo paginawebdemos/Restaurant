@@ -737,18 +737,18 @@ h2 {
   }
 
   
-  /* Ajustar filtros a columna en pantallas pequeñas */
-  .filter-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  #search, #category-filter-select {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 15px;
-  }
+/* Ajustar filtros a columna en pantallas pequeñas */
+.filter-container {
+  flex-direction: column;
+  gap: 10px;  /* Reducir el espacio entre los elementos */
 }
+
+#search, #category-filter-select {
+  width: 100%;
+  font-size: 14px;  /* Reducir el tamaño de la fuente */
+  padding: 8px 12px;  /* Reducir el relleno */
+}
+
 
 /* Para pantallas medianas (tabletas y computadoras de escritorio) */
 @media (min-width: 768px) {
