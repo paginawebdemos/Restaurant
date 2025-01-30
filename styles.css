@@ -1000,9 +1000,21 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.chat-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
 .chat-btn:hover {
   transform: scale(1.15);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.chat-btn:hover img {
+  transform: scale(1.05);
 }
 
 /* Botón de cerrar */
@@ -1028,6 +1040,10 @@ h2 {
 .close-btn:hover {
   background: #ff3b30;
   transform: scale(1.1);
+}
+
+.close-btn:active {
+  transform: scale(0.95);
 }
 
 /* Contenedor general del chat */
@@ -1064,7 +1080,6 @@ h2 {
   gap: 10px;
 }
 
-/* Estilo general para los mensajes */
 .message {
   padding: 12px;
   border-radius: 12px;
@@ -1075,23 +1090,25 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los mensajes del bot */
 .bot-message {
   background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   color: #202124;
   align-self: flex-start;
 }
 
-/* Estilos para los mensajes del usuario */
 .user-message {
   background: linear-gradient(135deg, #0066cc, #004ba0);
   color: white;
   align-self: flex-end;
 }
 
-/* Estilo para el input y botón de enviar */
+/* Caja de entrada del usuario */
 .input-box {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
   padding: 10px;
   background: white;
 }
@@ -1125,6 +1142,32 @@ h2 {
 #send-btn:hover {
   background: #0056b3;
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    height: 400px;
+    padding: 16px;
+  }
+
+  .close-btn {
+    top: 8px;
+    right: 8px;
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+  }
+
+  #send-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .chat-box {
+    padding: 10px;
+  }
 }
 
 
