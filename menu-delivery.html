@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,14 +13,19 @@
 </head>
 
 <body>
-
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                alert("🌟 ¡Bienvenido a Luna Mágica! 🌙\n\nSi vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.\n\nSi prefieres pedir Delivery, selecciona el plato que desees y presiona el botón 'Pedir Delivery'.\n\nGracias por leer. Puedes cerrar esta ventana presionando la 'X' arriba a la derecha. 🍽️✨");
+            }, 500);
+        };
+    </script>
 
     <div id="loading-container" class="loading-container">
         <img src="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" alt="Cargando..." class="loading-logo">
         <p>Cargando el menú...</p>
     </div>
     
-    <!-- Encabezado rediseñado -->
     <header class="header">
         <div class="header-content">
             <img src="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" alt="Logo Luna Mágica" class="logo">
@@ -31,26 +36,17 @@
         </div>
     </header>
 
-<!-- Menú desplegable -->
-<!-- Menú desplegable -->
-<nav class="menu">
-    <div class="menu-links">
-        <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="reserva.html" class="reserve"><i class="fas fa-calendar-alt"></i> Reservar</a>
-    </div>
-</nav>
+    <nav class="menu">
+        <div class="menu-links">
+            <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="reserva.html" class="reserve"><i class="fas fa-calendar-alt"></i> Reservar</a>
+        </div>
+    </nav>
 
-
-
-
-
-
-    <!-- Contenedor principal -->
     <main>
         <section class="menu-container">
-            <!-- Cajas de búsqueda y categorías -->
             <div class="filter-container">
                 <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
                 <select id="category-filter-select" class="category-filter">
@@ -61,14 +57,11 @@
                     <option value="Bebidas">🥤 Bebidas</option>
                 </select>
             </div>
-            <!-- Sección de ítems del menú -->
             <section id="menu" class="menu-items">
-                <!-- Aquí se cargarán los ítems del menú -->
             </section>
         </section>
     </main>
 
-    <!-- Modal para detalles del menú -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -79,7 +72,6 @@
         </div>
     </div>
 
-    <!-- Botón y ventana de chat -->
     <div class="chat-btn" id="chat-btn" onclick="toggleChat()">
         <img src="Imagenes/chat-2389223_1280.png" alt="Chat" />
     </div>
@@ -109,7 +101,6 @@
     <script src="menu.js" type="module"></script>
     <script src="script.js"></script>
 
-    <!-- Pie de página -->
     <footer class="footer-bottom">
         <p>© 2024 Desarrollado por <strong>Inovixe</strong>. Todos los derechos reservados.
             <a href="LICENSE.txt" target="_blank">Licencia</a>
@@ -118,4 +109,3 @@
 </body>
 
 </html>
-
