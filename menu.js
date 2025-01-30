@@ -68,11 +68,6 @@ window.goToOrderPage = function(id) {
     window.location.href = "order.html";  // Redirigir a la página de pedidos
 };
 
-// Selección de elementos necesarios
-const modal = document.getElementById("myModal");
-const closeBtn = document.querySelector(".close");
-
-// Mostrar el modal
 window.showDescription = function(id) {
     const item = menuItems.find(i => i.id === id);
     modalTitle.textContent = item.name;
@@ -82,21 +77,10 @@ window.showDescription = function(id) {
     modal.style.display = "block";
 };
 
-// Cerrar el modal con animación
+// Cerrar el modal cuando se haga clic en la "X"
 closeBtn.addEventListener("click", () => {
-    modal.classList.add("closing");  // Añadir la clase de cierre con animación
-    setTimeout(() => {
-        modal.style.display = "none";  // Ocultar el modal después de la animación
-        modal.classList.remove("closing");  // Eliminar la clase de animación
-    }, 500); // Esperar 500ms (tiempo de la animación) antes de ocultarlo
+    modal.style.display = "none";  // Ocultar el modal
 });
-
-// También puedes cerrar el modal al hacer clic fuera de él
-window.onclick = function(event) {
-  if (event.target == modal) {
-    closeBtn.click();  // Disparar el evento de cerrar el modal
-  }
-};
 
 
 
