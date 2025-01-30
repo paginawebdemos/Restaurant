@@ -77,12 +77,15 @@ window.showDescription = function(id) {
     modal.style.display = "block";
 };
 
+// Cerrar el modal con animación cuando se haga clic en la "X"
 closeBtn.addEventListener("click", () => {
-    modal.style.animation = "modalFadeOut 0.5s forwards"; // Activar animación de cierre
+    modal.style.animation = "modalFadeOut 0.5s forwards"; // Agregar animación de salida
     setTimeout(() => {
-        modal.style.display = "none";  // Ocultar el modal después de la animación
-    }, 500);
+        modal.style.display = "none";  // Ocultar después de la animación
+    }, 500); // Esperar que termine la animación
 });
+
+
 
 // Filtrar y buscar platos
 function filterMenu() {
