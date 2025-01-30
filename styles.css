@@ -883,23 +883,6 @@ h2 {
   }
 }
 
-/* Nueva animación de fade-out para el cierre */
-@keyframes modalFadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(-50%); /* Empujar el modal desde su posición actual */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(30%); /* Empujar el modal hacia abajo */
-  }
-}
-
-/* Para cuando se aplica la animación de cierre */
-.modal.closing {
-  animation: modalFadeOut 0.5s forwards;
-}
-
 .modal-content {
   background-color: #fff;
   margin: 0 auto; /* Centrado horizontal */
@@ -997,7 +980,6 @@ h2 {
       font-size: 1rem;  
   }
 }
-
 
 
   
