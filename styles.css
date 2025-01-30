@@ -948,7 +948,6 @@ h2 {
   background-color: #218838;  
 }
 
-/* Animación de fade-out y desplazamiento */
 @keyframes modalFadeOut {
   0% {
     opacity: 1;
@@ -960,10 +959,6 @@ h2 {
   }
 }
 
-/* Clase para cerrar el modal con animación */
-.modal-closing {
-  animation: modalFadeOut 0.5s forwards;
-}
 
   
 /* Estilos para dispositivos móviles */
