@@ -983,77 +983,96 @@ h2 {
 
 
   
-/* Bot�n flotante que abre el chat */
-.chat-btn {
-  position: fixed;
-  bottom: 20px;  
-  right: 20px;  
-  width: 50px;  
-  height: 50px;  
-  background-color: #007acc;
-  border-radius: 50%;  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;  
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  /* Botón flotante que abre el chat */
+        .chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007acc;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Imagen del �cono dentro del bot�n */
-.chat-btn img {
-  width: 100%;  
-  height: 100%;
-  object-fit: cover;   
-  border-radius: 50%;  
-  transition: transform 0.3s ease;
-}
+        .chat-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
 
-/* Efecto hover para el bot�n flotante */
-.chat-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+        .chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.chat-btn:hover img {
-  transform: scale(1.05);  
-}
- 
-/* Bot�n de cerrar (X) dentro del chat */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #ff5e57;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
+        .chat-btn:hover img {
+            transform: scale(1.05);
+        }
 
-/* Efecto hover para el bot�n de cerrar */
-.close-btn:hover {
-  background-color: #ff3b30;
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+        /* Checkbox para controlar la visibilidad del chat */
+        #chat-toggle {
+            display: none;
+        }
 
-/* Efecto active para el bot�n de cerrar */
-.close-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
+        /* Contenedor del chat */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
 
+        /* Mostrar chat cuando el checkbox está marcado */
+        #chat-toggle:checked + .chat-container {
+            display: flex;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* Botón de cerrar dentro del chat */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff5e57;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #ff3b30;
+            transform: scale(1.1);
+        }
+
+        .close-btn:active {
+            transform: scale(0.95);
+        }
 /* Contenedor general del chat */
 .chat-container {
   display: none;
