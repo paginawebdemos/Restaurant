@@ -1102,6 +1102,34 @@ h2 {
   align-self: flex-end;
 }
 
+/* Contenedor de los botones de opciones */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+/* Estilo para los botones de opciones */
+.option-button {
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  color: #00796b;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option-button:hover {
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 /* Caja de entrada del usuario */
 .input-box {
   display: flex;
