@@ -13,13 +13,16 @@
 </head>
 
 <body>
-    <script>
-        window.onload = function() {
-            setTimeout(() => {
-                alert("🌟 ¡Bienvenido a Luna Mágica! 🌙\n\nSi vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.\n\nSi prefieres pedir Delivery, selecciona el plato que desees y presiona el botón 'Pedir Delivery'.\n\nGracias por leer. Puedes cerrar esta ventana presionando la 'X' arriba a la derecha. 🍽️✨");
-            }, 500);
-        };
-    </script>
+    <div id="welcomeModal" class="modal" style="display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); color: white; display: flex; justify-content: center; align-items: center;">
+        <div class="modal-content" style="background: black; padding: 20px; border-radius: 10px; text-align: center; max-width: 80%;">
+            <span class="close" onclick="document.getElementById('welcomeModal').style.display='none'" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
+            <h2>🌟 ¡Bienvenido a Luna Mágica! 🌙</h2>
+            <p>Si vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.</p>
+            <p>Si prefieres pedir Delivery, selecciona el plato que desees y presiona el botón "Pedir Delivery".</p>
+            <p>Gracias por leer. Puedes cerrar esta ventana presionando la "X" arriba a la derecha. 🍽️✨</p>
+            <button onclick="document.getElementById('welcomeModal').style.display='none'" style="background: #ffcc00; border: none; padding: 10px 20px; margin-top: 10px; font-size: 16px; cursor: pointer; border-radius: 5px;">Cerrar</button>
+        </div>
+    </div>
 
     <div id="loading-container" class="loading-container">
         <img src="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" alt="Cargando..." class="loading-logo">
