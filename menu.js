@@ -77,13 +77,20 @@ window.showDescription = function(id) {
     modal.style.display = "block";
 };
 
-// Cerrar el modal con animación cuando se haga clic en la "X"
+// Abrir el modal correctamente cada vez
+function openModal() {
+    modal.style.display = "block"; // Mostrar el modal
+    modal.style.animation = "modalFadeIn 0.5s forwards"; // Aplicar animación de entrada
+}
+
+// Cerrar el modal con animación fluida
 closeBtn.addEventListener("click", () => {
-    modal.style.animation = "modalFadeOut 0.5s forwards"; // Agregar animación de salida
+    modal.style.animation = "modalFadeOut 0.5s forwards"; // Aplicar animación de salida
     setTimeout(() => {
-        modal.style.display = "none";  // Ocultar después de la animación
-    }, 500); // Esperar que termine la animación
+        modal.style.display = "none"; // Ocultar el modal después de la animación
+    }, 500); // Espera el tiempo de la animación antes de ocultarlo
 });
+
 
 
 
