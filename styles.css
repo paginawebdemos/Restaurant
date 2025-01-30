@@ -909,6 +909,16 @@ h2 {
   text-decoration: none;
   cursor: pointer;
 }
+@keyframes modalFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+}
 
 .modal img {
   width: 100%;
@@ -948,17 +958,8 @@ h2 {
   background-color: #218838;  
 }
 
-@keyframes modalFadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-30%);
-  }
-}
 
+  
 
   
 /* Estilos para dispositivos móviles */
