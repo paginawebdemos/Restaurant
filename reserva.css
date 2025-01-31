@@ -17,11 +17,25 @@ header {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
     text-align: center;
-    padding: 12px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 16px; /* Reducido desde 18px */
     font-weight: bold;
     width: 100%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.912);
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 14px; /* Reducido desde 16px */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 13px; /* Reducido desde 15px */
+        padding: 8px;
+    }
 }
 
 .reserva-form {
