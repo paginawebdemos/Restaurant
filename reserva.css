@@ -21,7 +21,7 @@ header {
     font-size: 16px; /* Reducido desde 18px */
     font-weight: bold;
     width: 100%;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.912);
+     border-bottom: 4px solid #000000; /* Línea de color en lugar de la sombra */
 }
 
 @media (max-width: 768px) {
