@@ -26,14 +26,14 @@ header {
 
 @media (max-width: 768px) {
     header {
-        font-size: 14px; /* Reducido desde 16px */
+        font-size: 12px; /* Reducido desde 16px */
         padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        font-size: 13px; /* Reducido desde 15px */
+        font-size: 11px; /* Reducido desde 15px */
         padding: 8px;
     }
 }
