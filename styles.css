@@ -539,7 +539,7 @@ body {
 }
 
 .category-filter {
-  padding: 12px;
+  padding: 12px 30px 12px 12px; /* Aumenta el espacio a la derecha para la flecha */
   font-size: 1rem;
   border-radius: 30px;
   border: 2px solid #ddd;
@@ -549,13 +549,19 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   appearance: none; /* Oculta la flecha por defecto */
   cursor: pointer;
+  position: relative; /* Para posicionar la flecha en relación al select */
 }
 
-/* Añadir icono de dropdown solo en el primer option */
-.arrow {
-  font-size: 0.8rem;
+/* Flecha en la esquina derecha */
+.category-filter::after {
+  content: "▼";
+  font-size: 1rem;
   color: #6c5ce7;
-  margin-left: 8px;
+  position: absolute;
+  right: 12px; /* Ajusta la distancia desde el borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 /* Estilo para el select y la flecha */
