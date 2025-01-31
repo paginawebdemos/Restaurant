@@ -56,18 +56,17 @@ body {
 .welcome-modal {
     display: none; /* Inicia oculto */
     position: fixed;  /* Posición fija en la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;  /* Asegura que la capa de fondo ocupe toda la altura */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    top: 0;  /* Asegura que empiece desde la parte superior */
+    left: 0;  /* Asegura que empiece desde la parte izquierda */
+    width: 100%;  /* Asegura que cubra todo el ancho de la pantalla */
+    height: 100%;  /* Asegura que cubra toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    display: flex; /* Flexbox para centrar el modal */
+    display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
 }
 
-/* El contenido del modal */
 .welcome-modal .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -85,6 +84,39 @@ body {
     color: #000;
     cursor: pointer;
 }
+
+/* Modal general de detalle (este es el que ya tienes) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+}
+
 
 
                            
