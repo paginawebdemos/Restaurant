@@ -78,6 +78,7 @@ body {
     position: relative; /* Asegura que el contenido se alinee correctamente */
 }
 
+/* Asegurar que el botón de cerrar no interfiera con el centrado */
 .welcome-modal .close {
     position: absolute;
     top: 10px;
