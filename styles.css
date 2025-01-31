@@ -62,7 +62,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
     z-index: 1000;
-    padding-top: 0; /* Asegura que esté centrado verticalmente */
     display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
