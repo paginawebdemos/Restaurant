@@ -65,9 +65,10 @@
         </div>
     </div>
 
+    <!-- Modal de detalle del plato -->
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal()">&times;</span>
             <img id="modal-img" src="" alt="">
             <h3 id="modal-title"></h3>
             <p id="modal-description"></p>
@@ -91,7 +92,7 @@
     </div>
 
     <script>
-        // Función para mostrar el modal de bienvenida
+        // Función para mostrar el modal de bienvenida cuando la página carga
         window.onload = function() {
             const welcomeModal = document.getElementById('welcomeModal');
             welcomeModal.style.display = 'block';
@@ -103,12 +104,30 @@
             welcomeModal.style.display = 'none';
         }
 
-        function toggleMenu() {
-            const menuLinks = document.getElementById('menu-links');
-            if (menuLinks.style.display === 'none' || menuLinks.style.display === '') {
-                menuLinks.style.display = 'block';
-            } else {
-                menuLinks.style.display = 'none';
+        // Función para cerrar el modal de detalle del plato
+        function closeModal() {
+            const myModal = document.getElementById('myModal');
+            myModal.style.display = 'none';
+        }
+
+        // Función para abrir el modal de detalle de un plato (ya existe en tu código)
+        function openModal(imgSrc, title, description) {
+            const myModal = document.getElementById('myModal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            
+            modalImg.src = imgSrc;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            myModal.style.display = 'block';
+        }
+
+        // Asegúrate de que el modal de detalle de plato cierre correctamente
+        window.onclick = function(event) {
+            const myModal = document.getElementById('myModal');
+            if (event.target == myModal) {
+                closeModal();
             }
         }
     </script>
