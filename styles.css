@@ -56,16 +56,15 @@ body {
 .welcome-modal {
     display: none; /* Inicia oculto */
     position: fixed;  /* Posición fija en la pantalla */
-    top: 50%;  /* Coloca el modal a la mitad de la altura */
-    left: 50%;  /* Coloca el modal a la mitad del ancho */
-    transform: translate(-50%, -50%); /* Ajuste para centrarlo correctamente */
-    width: 80%;
-    max-width: 500px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    top: 0;  /* Coloca el modal al principio de la pantalla */
+    left: 0;  /* Coloca el modal al principio de la pantalla */
+    width: 100%;  /* Asegura que cubra todo el ancho */
+    height: 100%;  /* Asegura que cubra toda la altura */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    padding: 20px;
-    border-radius: 10px;
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 .welcome-modal .modal-content {
@@ -73,6 +72,8 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
 }
 
 .welcome-modal .close {
@@ -115,6 +116,7 @@ body {
     color: #000;
     cursor: pointer;
 }
+
 
                            
   #welcome-container {
