@@ -1,134 +1,67 @@
 /* Estilos modernos, atractivos y completamente responsivos */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(180deg, #e3f2fd, #ffffff);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px; /* Reducido desde 18px */
-    font-weight: bold;
-    width: 100%;
-     border-bottom: 4px solid #000000; /* Línea de color en lugar de la sombra */
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 16px;
-    }
-}
-
-
-.reserva-form {
-    width: 90%;
-    max-width: 350px;
-    margin: 20px auto;
-    padding: 15px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.757);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.reserva-form:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.82);
-}
-
-form {
-    display: grid;
-    gap: 10px;
-}
-
-label {
-    font-weight: 600;
-    font-size: 14px;
-    color: #444;
-}
-
-input {
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input:focus {
-    border-color: #0043b6;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.919);
-    outline: none;
-}
-
-button {
-    background: linear-gradient(135deg, #0600ab, #008cff);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%;
-}
-
-button:hover {
-    background: linear-gradient(135deg, #000000, #000000);
-    transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.955);
-}
-
-@media (max-width: 768px) {
-    .reserva-form {
-        width: 95%;
-        padding: 14px;
-    }
-    header {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .reserva-form {
-        width: 98%;
-        padding: 12px;
-        margin: 15px auto;
-    }
-    header {
-        font-size: 15px;
-        padding: 10px;
-    }
-    input {
-        padding: 8px;
-        font-size: 13px;
-    }
-    button {
-        padding: 10px;
-        font-size: 13px;
-    }
-}
-
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(180deg, #e3f2fd, #ffffff);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+        .reserva-form {
+            width: 90%;
+            max-width: 350px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.757);
+            text-align: center;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #444;
+            text-align: left;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input {
+            border: 2px solid #ddd;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input:focus {
+            border-color: #0043b6;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.919);
+            outline: none;
+        }
+        button {
+            background: linear-gradient(135deg, #0600ab, #008cff);
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #000000, #000000);
+            transform: scale(1.03);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.955);
+        }
+   
