@@ -70,31 +70,28 @@ body {
 
 .welcome-modal .modal-content {
     background-color: #fff;
-    position: relative;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Importante para posicionar la X */
 }
 
-/* Ajuste de la "X" fuera del contenido */
+/* Ajuste de la "X" para que no esté sobre el texto */
 .welcome-modal .close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
-    color: #333;
+    font-size: 25px;
+    color: #000;
     cursor: pointer;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-.welcome-modal .close:hover {
-    color: #ff4c4c; /* Color rojo cuando el usuario pasa el mouse */
+.welcome-modal h3 {
+    margin-top: 20px; /* Agrega espacio debajo de la "X" */
 }
-
-
 
                            
   #welcome-container {
