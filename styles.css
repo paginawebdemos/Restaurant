@@ -56,44 +56,50 @@ body {
 .welcome-modal {
     display: none; /* Inicia oculto */
     position: fixed;  /* Posición fija en la pantalla */
-    top: 50%;  
-    left: 50%;  
-    transform: translate(-50%, -50%); /* Centrado exacto */
-    width: 80%;
-    max-width: 500px;
-    height: auto;
+    top: 50%;  /* Coloca el modal a la mitad de la altura */
+    left: 50%;  /* Coloca el modal a la mitad del ancho */
+    transform: translate(-50%, -50%); /* Ajuste para centrarlo correctamente */
+    width: 90%;  /* Un poco más ancho en móviles */
+    max-width: 600px;  /* Tamaño máximo más grande */
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* Contenido del modal */
 .welcome-modal .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
-    border-radius: 10px;
-    position: relative; /* Necesario para posicionar correctamente la "X" */
+    border-radius: 12px;
+    position: relative; /* Necesario para posicionar la "X" correctamente */
+    font-size: 18px; /* Letra más grande */
 }
 
-/* Botón de cierre (X) */
+/* Botón de cierre */
 .welcome-modal .close {
     position: absolute;
-    top: -15px; /* Mueve la "X" hacia arriba */
-    right: -15px; /* Mueve la "X" hacia la derecha */
-    font-size: 25px;
-    color: #fff; /* Cambia el color para que contraste */
-    background: red;
-    width: 30px;
-    height: 30px;
+    top: -10px;  /* Lo subimos para que no se superponga al texto */
+    right: -10px;  /* Lo movemos un poco fuera del modal */
+    font-size: 28px;  /* Más grande */
+    color: #000;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #ccc;
     border-radius: 50%;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
 }
+
+/* Cambio de color al pasar el mouse */
+.welcome-modal .close:hover {
+    background-color: #f1f1f1;
+}
+
 
 
 
