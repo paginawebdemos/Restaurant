@@ -1163,11 +1163,6 @@ h2 {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.option-button:hover {
-  background: linear-gradient(135deg, #00796b, #004d40);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
 
 /* Caja de entrada del usuario */
 .input-box {
