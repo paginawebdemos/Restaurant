@@ -14,15 +14,8 @@
 </head>
 
 <body>
-    <script>
-        window.onload = function() {
-            setTimeout(() => {
-                alert("🌟 ¡Bienvenido a Luna Mágica! 🌙\n\nSi vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.\n\nSi prefieres pedir Delivery, selecciona el plato que desees y presiona el botón 'Pedir Delivery'.");
-            }, 500);
-        };
-    </script>
 
-        <div id="loading-container" class="loading-container">
+    <div id="loading-container" class="loading-container">
         <img src="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" alt="Cargando..." class="loading-logo">
         <p>Cargando el menú...</p>
     </div>
@@ -47,21 +40,30 @@
     </nav>
 
     <main>
-<section class="menu-container">
-  <div class="filter-container">
-    <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
-    <select id="category-filter-select" class="category-filter">
-      <option value="">🌐 Todas las categorías</option>
-      <option value="Entradas">🥗 Entradas</option>
-      <option value="Platos principales">🍝 Platos principales</option>
-      <option value="Postres">🍰 Postres</option>
-      <option value="Bebidas">🥤 Bebidas</option>
-    </select>
-  </div>
-  <section id="menu" class="menu-items"></section>
-</section>
-
+        <section class="menu-container">
+            <div class="filter-container">
+                <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
+                <select id="category-filter-select" class="category-filter">
+                    <option value="">🌐 Todas las categorías</option>
+                    <option value="Entradas">🥗 Entradas</option>
+                    <option value="Platos principales">🍝 Platos principales</option>
+                    <option value="Postres">🍰 Postres</option>
+                    <option value="Bebidas">🥤 Bebidas</option>
+                </select>
+            </div>
+            <section id="menu" class="menu-items"></section>
+        </section>
     </main>
+
+    <!-- Modal de bienvenida -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-welcome-modal">&times;</span>
+            <h3>🌟 ¡Bienvenido a Luna Mágica! 🌙</h3>
+            <p>Si vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.</p>
+            <p>Si prefieres pedir Delivery, selecciona el plato que desees y presiona el botón 'Pedir Delivery'.</p>
+        </div>
+    </div>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -89,14 +91,26 @@
     </div>
 
     <script>
-        function toggleMenu() {
-            const menuLinks = document.getElementById('menu-links');
-            if (menuLinks.style.display === 'none' || menuLinks.style.display === '') {
-                menuLinks.style.display = 'block';
-            } else {
-                menuLinks.style.display = 'none';
+        // Mostrar el modal de bienvenida al cargar la página
+        window.onload = function() {
+            const welcomeModal = document.getElementById("welcomeModal");
+            const closeModal = document.getElementById("close-welcome-modal");
+
+            // Mostrar modal
+            welcomeModal.style.display = "block";
+
+            // Cerrar el modal cuando se hace clic en la X
+            closeModal.onclick = function() {
+                welcomeModal.style.display = "none";
             }
-        }
+
+            // Cerrar el modal si se hace clic fuera del contenido
+            window.onclick = function(event) {
+                if (event.target === welcomeModal) {
+                    welcomeModal.style.display = "none";
+                }
+            }
+        };
     </script>
 
     <script src="menu.js" type="module"></script>
@@ -110,4 +124,3 @@
 </body>
 
 </html>
-
