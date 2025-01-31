@@ -3,49 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva tu Lugar</title>
-    <link rel="stylesheet" href="reserva.css">
+    <title>Reserva Tu Espacio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        }
+        .reserva-form {
+            background: #fff;
+            color: #333;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 400px;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #0043b6;
+            box-shadow: 0 0 6px rgba(0, 67, 182, 0.5);
+            outline: none;
+        }
+        button {
+            background: linear-gradient(135deg, #0043b6, #008cff);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+            width: 100%;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #000000, #0043b6);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        }
+        @media (max-width: 480px) {
+            .reserva-form {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1><i class="fas fa-calendar-check"></i> Reserva tu Lugar</h1>
-    </header>
-    
+    <header>Reserva Tu Espacio</header>
     <section class="reserva-form">
         <form id="formReserva">
-            <div class="input-group">
-                <label for="nombre"><i class="fas fa-user"></i> Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="correo"><i class="fas fa-envelope"></i> Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@email.com" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="fecha"><i class="fas fa-calendar-day"></i> Fecha de Reserva:</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="hora"><i class="fas fa-clock"></i> Hora de Reserva:</label>
-                <input type="time" id="hora" name="hora" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="personas"><i class="fas fa-users"></i> Número de Personas:</label>
-                <input type="number" id="personas" name="personas" min="1" required>
-            </div>
-            
-            <button type="button" id="confirmarReserva" class="btn-animado">
-                <i class="fas fa-check"></i> Confirmar Reserva
-            </button>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="fecha">Fecha de Reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora de Reserva:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="personas">Número de Personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+
+            <button type="button" id="confirmarReserva">Confirmar Reserva</button>
         </form>
     </section>
-
-    <script src="reserva.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $('#confirmarReserva').click(function(){
+                alert('¡Reserva confirmada!');
+            });
+        });
+    </script>
 </body>
 </html>
+
