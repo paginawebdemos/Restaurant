@@ -266,11 +266,28 @@ body {
   color: #000000; /* Negro para Reservar */
 }
 
-/* Efecto hover para los enlaces */
-.menu-links a:hover {
-  background-color: #6c5ce7;
-  color: #ffffff;
+/* Efecto hover y active con duración */
+.menu-links a {
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+.menu-links a:active {
+  background-color: #000000;
+  color: #ffffff;
+  animation: resetLinkEffect 2s forwards;
+}
+
+@keyframes resetLinkEffect {
+  0% {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  100% {
+    background-color: initial;
+    color: initial;
+  }
+}
+
 
 /* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
