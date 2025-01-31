@@ -17,17 +17,18 @@ header {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
     text-align: center;
-    padding: 25px 0;
-    font-size: 28px;
+    padding: 20px;
+    font-size: 22px;
     font-weight: bold;
     width: 100%;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .reserva-form {
+    width: 90%;
     max-width: 450px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 25px;
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -58,6 +59,8 @@ input {
     border: 2px solid #ddd;
     border-radius: 10px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -76,35 +79,46 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
 }
 
 button:hover {
     background: linear-gradient(135deg, #ff758c, #ff5c75);
-    transform: scale(1.07);
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
     .reserva-form {
-        width: 90%;
-        padding: 25px;
+        width: 95%;
+        padding: 20px;
     }
 
     header {
-        font-size: 24px;
-        padding: 20px 0;
+        font-size: 20px;
+        padding: 18px;
     }
 }
 
 @media (max-width: 480px) {
     .reserva-form {
         width: 95%;
-        padding: 20px;
+        padding: 15px;
+        margin: 20px auto;
     }
     
     header {
-        font-size: 22px;
+        font-size: 18px;
+        padding: 15px;
+    }
+    
+    input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 15px;
     }
 }
-
-
