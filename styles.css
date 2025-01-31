@@ -539,7 +539,7 @@ body {
 }
 
 .category-filter {
-  padding: 12px 30px 12px 12px; /* Aumenta el espacio a la derecha para la flecha */
+  padding: 12px;
   font-size: 1rem;
   border-radius: 30px;
   border: 2px solid #ddd;
@@ -549,22 +549,20 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   appearance: none; /* Oculta la flecha por defecto */
   cursor: pointer;
-  position: relative; /* Para posicionar la flecha en relación al select */
 }
 
-/* Flecha en la esquina derecha */
+/* Añadir icono de dropdown (flecha hacia abajo) en la esquina derecha */
 .category-filter::after {
   content: "▼";
   font-size: 1rem;
   color: #6c5ce7;
   position: absolute;
-  right: 12px; /* Ajusta la distancia desde el borde derecho */
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
-/* Estilo para el select y la flecha */
 .category-filter:hover,
 .search-box:hover {
   border-color: #6c5ce7;
@@ -587,6 +585,7 @@ body {
     width: 90%;
   }
 }
+
 
     /* Estilo para el contenedor principal de la secci�n del men� */
     .container {
