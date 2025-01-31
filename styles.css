@@ -62,7 +62,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
     z-index: 1000;
-    padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +69,7 @@ body {
 
 .welcome-modal .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
@@ -78,20 +77,23 @@ body {
     position: relative; /* Importante para posicionar la X */
 }
 
-/* Ajuste de la "X" para que no esté sobre el texto */
+/* Ajuste de la "X" para mayor separación */
 .welcome-modal .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 25px;
+    top: 15px; /* Más separación desde arriba */
+    right: 20px; /* Más separación desde la derecha */
+    font-size: 30px;
     color: #000;
     cursor: pointer;
     font-weight: bold;
 }
 
+/* Aumenta el margen del título para más espacio */
 .welcome-modal h3 {
-    margin-top: 20px; /* Agrega espacio debajo de la "X" */
+    margin-top: 40px; /* Más espacio debajo de la "X" */
+    font-size: 22px;
 }
+
 
                            
   #welcome-container {
