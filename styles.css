@@ -551,10 +551,10 @@ body {
   cursor: pointer;
 }
 
-/* Añadir icono de dropdown */
-.select-wrapper::after {
+/* Añadir icono de dropdown al final de la caja */
+.category-filter::after {
   content: "▼";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #6c5ce7;
   position: absolute;
   right: 15px;
@@ -563,6 +563,7 @@ body {
   pointer-events: none;
 }
 
+/* Efecto hover para los elementos del filtro */
 .category-filter:hover,
 .search-box:hover {
   border-color: #6c5ce7;
