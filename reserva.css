@@ -16,7 +16,7 @@ body {
     max-width: 350px;
     padding: 15px;
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.757);
     text-align: center;
 }
@@ -41,21 +41,21 @@ label {
 }
 
 input, button {
-    padding: 12px;
+    padding: 6px; /* Se redujo el padding */
     font-size: 14px;
-    border-radius: 20px;
+    border-radius: 4px; /* Menos borde redondeado */
     width: 100%;
     box-sizing: border-box;
 }
 
 input {
-    border: 2px solid #ddd;
+    border: 1.5px solid #ddd; /* Borde menos grueso */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
     border-color: #0043b6;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.919);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); /* Sombra más sutil */
     outline: none;
 }
 
