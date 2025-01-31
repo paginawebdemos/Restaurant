@@ -1170,7 +1170,22 @@ h2 {
   background: linear-gradient(135deg, #00796b, #004d40);
   color: #ffffff;
   transform: translateY(-2px);
+  animation: resetEffect 2s forwards;
 }
+
+@keyframes resetEffect {
+  0% {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  100% {
+    background: initial;
+    color: initial;
+    transform: translateY(0);
+  }
+}
+
 
 
 /* Caja de entrada del usuario */
