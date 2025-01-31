@@ -11,6 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta http-equiv="Content-Language" content="es">
+
+    <style>
+        /* Estilos para el nuevo modal de bienvenida */
+        #welcomeModal {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            justify-content: center;
+            align-items: center;
+            z-index: 10000; /* Un valor alto para asegurarse de que no interfiera con otros modales */
+        }
+
+        .welcome-modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .welcome-modal-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-modal-content p {
+            font-size: 1.1em;
+        }
+
+        .close-welcome-modal {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,10 +97,10 @@
         </section>
     </main>
 
-    <!-- Modal de bienvenida -->
+    <!-- Modal de bienvenida (nuevo) -->
     <div id="welcomeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-welcome-modal">&times;</span>
+        <div class="welcome-modal-content">
+            <span class="close-welcome-modal" id="close-welcome-modal">&times;</span>
             <h3>🌟 ¡Bienvenido a Luna Mágica! 🌙</h3>
             <p>Si vas a comer en el restaurante, puedes observar los platos en el menú y cuando estés decidido, comunícaselo al mesero.</p>
             <p>Si prefieres pedir Delivery, selecciona el plato que desees y presiona el botón 'Pedir Delivery'.</p>
@@ -91,13 +133,13 @@
     </div>
 
     <script>
-        // Mostrar el modal de bienvenida al cargar la página
+        // Mostrar el modal de bienvenida después de que la página haya cargado
         window.onload = function() {
             const welcomeModal = document.getElementById("welcomeModal");
             const closeModal = document.getElementById("close-welcome-modal");
 
-            // Mostrar modal
-            welcomeModal.style.display = "block";
+            // Mostrar el modal de bienvenida al cargar la página
+            welcomeModal.style.display = "flex"; // Usamos 'flex' para centrarlo
 
             // Cerrar el modal cuando se hace clic en la X
             closeModal.onclick = function() {
