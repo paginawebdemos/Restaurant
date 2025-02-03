@@ -479,7 +479,17 @@ body {
     font-size: 0.85rem;
   }
 }
-    
+
+/* Ajustes solo para computadoras */
+@media screen and (min-width: 1024px) {
+  .search-box, .category-filter {
+    width: 300px; /* Aumentar el ancho */
+    padding: 12px 18px; /* Ajustar el padding */
+    font-size: 1.1rem; /* Hacer el texto un poco más grande */
+  }
+}
+
+  
 /* Estilo de la sección del menú */
 .menu-section {
   width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
