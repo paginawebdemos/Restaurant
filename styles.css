@@ -591,7 +591,13 @@ body {
 
 
 
- 
+    /* Estilo para el contenedor principal de la secci�n del men� */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
      
 
     
@@ -615,14 +621,8 @@ body {
   border: 2px solid #000000;
 }
 
-  /* Asegurar que los contenedores se ajusten bien en pantallas grandes */
-  @media screen and (min-width: 1024px) {
-    /* Ajuste del ancho de cada contenedor y margen entre columnas */
-    .menu-item {
-      width: calc(33.33% - 60px);  /* Reducir el tamaño para permitir más separación */
-      margin: 10px 30px;  /* Separar los items con 30px de margen horizontal */
-    }
-    
+
+
     /* Contenedor principal para los elementos de menú */
     .menu-container {
       display: flex;
