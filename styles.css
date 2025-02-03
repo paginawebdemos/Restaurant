@@ -480,14 +480,7 @@ body {
   }
 }
 
-/* Ajustes solo para computadoras */
-@media screen and (min-width: 1024px) {
-  .search-box, .category-filter {
-    width: 300px; /* Aumentar el ancho */
-    padding: 12px 18px; /* Ajustar el padding */
-    font-size: 1.1rem; /* Hacer el texto un poco más grande */
-  }
-}
+
 
   
 /* Estilo de la sección del menú */
@@ -535,16 +528,8 @@ body {
 }
 
      
-    /* Contenedor de part�culas (fondo din�mico) */
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    
+
+
     /* Contenedor del filtro */
     .filter-container {
       display: flex;
@@ -594,6 +579,17 @@ body {
       border-color: #6c5ce7;
       box-shadow: 0 0 10px rgba(108, 92, 237, 0.5);
     }
+
+@media screen and (min-width: 1024px) {
+  .search-box {
+    width: 300px; /* Aumentar el ancho en pantallas grandes */
+  }
+
+  .category-filter {
+    width: 270px; /* Hacer el select un poco más ancho */
+  }
+}
+
     /* Estilo para el contenedor principal de la secci�n del men� */
     .container {
       display: flex;
