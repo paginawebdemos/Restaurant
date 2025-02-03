@@ -857,20 +857,21 @@ h2 {
     
     
 
-/* Estilos mejorados para el modal */
+/* Estilos para el modal */
 .modal {
-  display: none;
+  display: none;  
   position: fixed;
-  z-index: 1050;
+  z-index: 1; 
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; /* Centrado verticalmente en computadoras */
+  transform: translateY(-50%); /* Ajuste para centrar el modal en computadoras */
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding-top: 40px;
-  opacity: 0;
-  animation: modalFadeIn 0.5s forwards;
+  background-color: rgba(0, 0, 0, 0.4);  
+  z-index: 1050;   
+  padding-top: 40px; /* Padding top para computadoras */
+  opacity: 0; /* Para que comience invisible */
+  animation: modalFadeIn 0.5s forwards; /* Agregar la animación al modal */
 }
 
 /* Fondo oscuro detrás del modal */
@@ -880,113 +881,118 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.97);   
+  z-index: 1040;   
 }
 
-/* Animación de entrada y salida */
+/* Animación de fade-in y desplazamiento */
 @keyframes modalFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(-30%); /* Empujar el modal desde abajo */
   }
   100% {
     opacity: 1;
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes modalFadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(-50%); /* Centrado del modal */
   }
 }
 
 .modal-content {
-  background-color: #ffffff;
-  margin: 0 auto;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
+  background-color: #fff;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  border: 1px solid #888;
   width: 80%;
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  animation: scaleIn 0.3s ease-out;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;  
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes scaleOut {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
-/* Botón de cierre con mejor diseño */
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
-  background-color: #ff5e57;
-  color: white;
-  font-size: 22px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.close:hover {
-  background-color: #ff3b30;
-  transform: scale(1.1);
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal img {
   width: 100%;
   max-width: 300px;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
+/* Reducción del tamaño de los textos en computadoras */
 .modal h3 {
   margin-top: 0;
-  font-size: 1.4rem;
-  color: black;
-  margin-bottom: 10px;
+  font-size: 1.1rem;  /* Tamaño de fuente reducido */
+  color: black;  
+  margin-bottom: 10px;  
 }
 
 .modal p {
-  font-size: 1rem;
+  font-size: 0.9rem;  /* Tamaño de fuente reducido */
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 15px;  
+}
+
+.order-button {
+  background-color: #28a745;  
+  color: white;
+  font-size: 0.9rem; /* Tamaño de fuente reducido */
+  font-weight: bold;  
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;  
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #218838;  
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .modal {
+    padding-top: 60px; /* Centrado verticalmente en móviles */
+    transform: translateY(-50%); /* Ajuste para centrar en móviles */
+    opacity: 0; /* Para que comience invisible en móviles */
+    animation: modalFadeIn 0.5s forwards; /* Animación en móviles también */
+  }
+
+  .modal-content {
+      padding: 15px;  
+      width: 90%;  
+  }
+
+  .order-button {
+      padding: 8px 16px;  
+      font-size: 0.9rem;  
+      margin-top: 10px;  
+  }
+
+  .modal img {
+      max-width: 250px;  
+  }
+
+  .modal h3 {
+      font-size: 1.3rem;  
+  }
+
+  .modal p {
+      font-size: 1rem;  
+  }
 }
 
 
