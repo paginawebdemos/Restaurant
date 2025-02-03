@@ -696,13 +696,13 @@ h2 {
   color: #006400; 
 }
 
-* Estilo y efecto hover para los botones */
+/* Estilo y efecto hover para los botones */
 .menu-item .pedido-button,
 .read-more-button {
   font-size: 0.8rem;
   font-weight: bold;
   padding: 6px 12px;
-  border-radius: 5px;
+  border-radius: 20px; /* Bordes más redondeados */
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
@@ -713,8 +713,6 @@ h2 {
   color: white;
   border: none;
 }
- 
-
 
 .read-more-button {
   background-color: #007bff;
@@ -726,6 +724,7 @@ h2 {
 .read-more-button:hover {
   background-color: #0056b3;
 }
+
 
 
 /* Media queries */
