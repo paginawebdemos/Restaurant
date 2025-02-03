@@ -702,7 +702,7 @@ h2 {
   font-size: 0.8rem;
   font-weight: bold;
   padding: 6px 12px;
-  border-radius: 20px; /* Bordes más redondeados */
+  border-radius: 10px; /* Bordes redondeados pero sutiles */
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
