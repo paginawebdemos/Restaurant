@@ -181,7 +181,13 @@ body {
 }
 
 
-
+/* Estilo para el contenedor del menú */
+.menu-container {
+  padding: 8px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .filter-container {
   display: flex;
@@ -1521,4 +1527,4 @@ form button:hover {
     color: #00e1ff; /* Aplica color blanco al texto en negrita */
   }
   
-
+}
