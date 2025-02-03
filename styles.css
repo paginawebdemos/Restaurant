@@ -268,7 +268,217 @@ body {
   }
  
 
+/* Estilo para el menú */
+.menu {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+.menu-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espacio reducido entre los elementos */
+  font-size: 1.2rem;
+  flex-wrap: nowrap; /* Asegura que todos los elementos se mantengan en una fila */
+  align-items: center;
+}
+
+.menu-links a {
+  text-decoration: none;
+  padding: 8px 15px;  /* Reducción del padding */
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Colores para los enlaces de redes sociales */
+.menu-links a.facebook {
+  color: #3b5998; /* Azul de Facebook */
+}
+
+.menu-links a.instagram {
+  color: #E1306C; /* Rosa morado de Instagram */
+}
+
+.menu-links a.twitter {
+  color: #1DA1F2; /* Azul de Twitter */
+}
+
+/* Color para el enlace de Reservar */
+.menu-links a.reserve {
+  color: #000000; /* Negro para Reservar */
+}
+
+/* Efecto hover y active con duración */
+.menu-links a {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-links a:active {
+  background-color: #000000;
+  color: #ffffff;
+  animation: resetLinkEffect 2s forwards;
+}
+
+@keyframes resetLinkEffect {
+  0% {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  100% {
+    background-color: initial;
+    color: initial;
+  }
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-links {
+    gap: 5px; /* Espacio aún más pequeño entre los elementos */
+    font-size: 0.9rem; /* Reducción de tamaño de fuente */
+    justify-content: space-evenly; /* Asegura que los elementos tengan espacio uniforme */
+  }
+
+  .menu-links a {
+    padding: 5px 10px; /* Menos padding en pantallas pequeñas */
+    font-size: 0.8rem; /* Aumento de la reducción del tamaño de fuente */
+  }
+}
+
+/* Encabezado rediseñado */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0008ea, #00d9ff);
+  border-bottom: 4px solid #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-text p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Estilo para el contenedor del menú */
+.menu-container {
+  padding: 8px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-box, .category-filter {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.search-box:hover, .category-filter:hover {
+  border-color: #6c5ce7;
+}
+
+.search-box:focus, .category-filter:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 237, 0.5);
+}
+
+/* Estilo para los ítems del menú */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box, .category-filter {
+    width: 90%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .search-box, .category-filter {
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 0.85rem;
+  }
+}
     
 /* Estilo de la sección del menú */
 .menu-section {
