@@ -998,75 +998,68 @@ h2 {
 
 
   
-/* Bot�n flotante que abre el chat */
+/* Botón flotante que abre el chat */
 .chat-btn {
   position: fixed;
-  bottom: 20px;  
-  right: 20px;  
-  width: 50px;  
-  height: 50px;  
-  background-color: #007acc;
-  border-radius: 50%;  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #007acc, #005bb5);
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 15;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Imagen del �cono dentro del bot�n */
 .chat-btn img {
-  width: 100%;  
+  width: 100%;
   height: 100%;
-  object-fit: cover;   
-  border-radius: 50%;  
+  object-fit: cover;
+  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
-/* Efecto hover para el bot�n flotante */
 .chat-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .chat-btn:hover img {
-  transform: scale(1.05);  
+  transform: scale(1.05);
 }
- 
-/* Bot�n de cerrar (X) dentro del chat */
+
+/* Botón de cerrar */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   font-size: 18px;
-  color: #ffffff;
-  background-color: #ff5e57;
+  color: white;
+  background: linear-gradient(135deg, #ff5e57, #d63031);
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
-/* Efecto hover para el bot�n de cerrar */
 .close-btn:hover {
-  background-color: #ff3b30;
+  background: #ff3b30;
   transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto active para el bot�n de cerrar */
 .close-btn:active {
   transform: scale(0.95);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Contenedor general del chat */
@@ -1077,56 +1070,52 @@ h2 {
   right: 20px;
   width: 360px;
   height: 500px;
-  background-color: #fefefe;
+  background: white;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  padding: 20px;
-  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Contenedor de los mensajes dentro del chat */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor de los mensajes */
 .chat-box {
-  width: 100%;
-  max-height: 400px;
-  overflow-y: auto;
+  flex: 1;
   padding: 15px;
-  background-color: #f9f9f9;
+  background: #f5f5f5;
+  overflow-y: auto;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Estilo general para los mensajes */
 .message {
   padding: 12px;
-  margin: 5px 0;
   border-radius: 12px;
   font-size: 15px;
   line-height: 1.5;
   word-wrap: break-word;
-  display: inline-block;
-  width: auto;
   max-width: 80%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los mensajes del bot */
 .bot-message {
-  background-color: #e8f0fe;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   color: #202124;
   align-self: flex-start;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los mensajes del usuario */
 .user-message {
-  background-color: #0066cc;
-  color: #ffffff;
+  background: linear-gradient(135deg, #0066cc, #004ba0);
+  color: white;
   align-self: flex-end;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor de los botones de opciones */
@@ -1139,7 +1128,7 @@ h2 {
 
 /* Estilo para los botones de opciones */
 .option-button {
-  background-color: #e0f7fa;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
   color: #00796b;
   border: none;
   padding: 12px;
@@ -1148,15 +1137,33 @@ h2 {
   font-size: 14px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.option-button {
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Efecto hover para los botones de opciones */
-.option-button:hover {
-  background-color: #00796b;
+.option-button:active {
+  background: linear-gradient(135deg, #00796b, #004d40);
   color: #ffffff;
   transform: translateY(-2px);
+  animation: resetEffect 2s forwards;
 }
+
+@keyframes resetEffect {
+  0% {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  100% {
+    background: initial;
+    color: initial;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* Caja de entrada del usuario */
 .input-box {
@@ -1165,22 +1172,22 @@ h2 {
   margin-top: 10px;
   width: 100%;
   gap: 10px;
+  padding: 10px;
+  background: white;
 }
 
-/* Estilo para el campo de entrada de texto */
 #user-input {
   flex-grow: 1;
   padding: 12px;
   border-radius: 20px;
   border: 1px solid #cccccc;
   font-size: 15px;
-  background-color: #ffffff;
+  background: #ffffff;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo para el bot�n de enviar */
 #send-btn {
-  background-color: #0066cc;
+  background: linear-gradient(135deg, #0066cc, #004ba0);
   color: white;
   width: 44px;
   height: 44px;
@@ -1192,16 +1199,14 @@ h2 {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Efecto hover para el bot�n de enviar */
 #send-btn:hover {
-  background-color: #0056b3;
+  background: #0056b3;
   transform: scale(1.1);
 }
 
-/* Ajustes para dispositivos m�viles (pantallas m�s peque�as) */
 @media (max-width: 768px) {
   .chat-container {
     width: 90%;
@@ -1209,7 +1214,6 @@ h2 {
     padding: 16px;
   }
 
-  /* Bot�n de cerrar (X) en m�viles */
   .close-btn {
     top: 8px;
     right: 8px;
@@ -1224,12 +1228,10 @@ h2 {
     font-size: 16px;
   }
 
-  /* Ajustes en los m�rgenes del contenedor */
   .chat-box {
     padding: 10px;
   }
 }
-
   
 /* Estilo del contenedor del formulario */
 .order-form {
