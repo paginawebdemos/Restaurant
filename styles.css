@@ -631,7 +631,24 @@ body {
     }
   }
   
-  
+  /* Ajustes solo para computadoras */
+@media screen and (min-width: 1024px) {
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar los elementos */
+    gap: 40px; /* Espaciado más uniforme */
+    padding: 20px; /* Añadir un poco de padding */
+  }
+
+  .menu-item {
+    width: calc(25% - 40px); /* Ajustar tamaño a 4 por fila */
+    max-width: 250px; /* Limitar el ancho para que no sean demasiado grandes */
+    margin: 10px; /* Espaciado más uniforme */
+    aspect-ratio: 1 / 1.1; /* Ajuste ligero de proporción */
+  }
+}
+
 
 
  
