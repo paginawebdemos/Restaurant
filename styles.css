@@ -624,8 +624,8 @@ body {
   @media screen and (min-width: 1024px) {
     /* Ajuste del ancho de cada contenedor y margen entre columnas */
     .menu-item {
-      width: calc(33.33% - 60px);  /* Reducir el tamaño para permitir más separación */
-      margin: 10px 30px;  /* Separar los items con 30px de margen horizontal */
+      width: calc(33.33% - 40px);  /* Reducir el tamaño para permitir más separación */
+      margin: 10px 20px;  /* Separar los items con 30px de margen horizontal */
     }
     
     /* Contenedor principal para los elementos de menú */
