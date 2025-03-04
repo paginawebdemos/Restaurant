@@ -620,7 +620,13 @@ body {
   border: 2px solid #000000;
 }
 
-
+  /* Asegurar que los contenedores se ajusten bien en pantallas grandes */
+  @media screen and (min-width: 1024px) {
+    /* Ajuste del ancho de cada contenedor y margen entre columnas */
+    .menu-item {
+      width: calc(33.33% - 40px);  /* Reducir el tamaño para permitir más separación */
+      margin: 10px 20px;  /* Separar los items con 30px de margen horizontal */
+    }
     
     /* Contenedor principal para los elementos de menú */
     .menu-container {
@@ -637,7 +643,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centrar los elementos */
-    gap: 40px; /* Espaciado más uniforme */
+    gap: 20px; /* Espaciado más uniforme */
     padding: 20px; /* Añadir un poco de padding */
   }
 
