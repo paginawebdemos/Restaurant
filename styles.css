@@ -620,13 +620,14 @@ body {
   border: 2px solid #000000;
 }
 
-  /* Asegurar que los contenedores se ajusten bien en pantallas grandes */
-  @media screen and (min-width: 1024px) {
-    /* Ajuste del ancho de cada contenedor y margen entre columnas */
-    .menu-item {
-      width: calc(33.33% - 40px);  /* Reducir el tamaño para permitir más separación */
-      margin: 10px 20px;  /* Separar los items con 30px de margen horizontal */
-    }
+/* Ajustes solo para computadoras */
+@media screen and (min-width: 1024px) {
+  .menu-item {
+    width: calc(30% - 40px); /* Aumenta el ancho al 30% en lugar del 25% */
+    max-width: 300px; /* Aumenta el límite de ancho */
+  }
+}
+
     
     /* Contenedor principal para los elementos de menú */
     .menu-container {
